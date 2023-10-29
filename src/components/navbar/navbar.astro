@@ -4,8 +4,11 @@ import Button from "@components/ui/button.astro";
 import { Icon } from "astro-icon";
 import { localizePath } from "astro-i18next";
 import { t } from "i18next";
+import logo from "@assets/tsj-logo.svg"
+import { Image } from "astro:assets";
 
-export const menuitems = [
+export const menuitems = []
+/*[
 	{
 		title: "Sub items",
 		children: [
@@ -26,7 +29,7 @@ export const menuitems = [
 		title: "header.contact",
 		path: "/contact",
 	},
-];
+]; */
 ---
 
 <div
@@ -36,8 +39,9 @@ export const menuitems = [
 		<a
 			href={localizePath("/")}
 			class="flex gap-3 items-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
-			<Icon name="logo" width="30" class="dark:invert" alt="Logo"></Icon>
-			Astros
+			<!-- <logo name="logo" width="30" class="dark:invert" alt="Logo"></logo> -->
+			<Image src={logo} alt="" width={40}/>
+			The Stack Journal
 		</a>
 		<button class="md:hidden text-gray-500 w-10 h-10 relative focus:outline-none" @click="open = !open">
 			<span class="sr-only">Open main menu</span>
@@ -151,13 +155,13 @@ export const menuitems = [
 				)
 			}
 		</div>
-		<div class="mt-4 md:mt-0 flex flex-col md:flex-row gap-4">
+		<!-- <div class="mt-4 md:mt-0 flex flex-col md:flex-row gap-4">
 			<Link href="/login" style="outline" class="md:px-3 md:py-2 leading-6">
 				{t("header.secondary_button_text")}
 			</Link>
 			<Link href="https://github.com/zankhq/astros" class="md:px-3 md:py-2 leading-6">
 				{t("header.primary_button_text")}
 			</Link>
-		</div>
+		</div> -->
 	</nav>
 </div>

@@ -1,10 +1,10 @@
 {
 	"hero": {
-		"title": "Supercharged web development!",
-		"subtitle": "Unleashing the Power of the Web: Combines Astro, Tailwind CSS and Alpine.js to Streamline Your Web Development Process.",
+		"title": "We're building something awesome!",
+		"subtitle": "Be the first to know when we launch",
 		"globe_title": "Craft Stunning, High-Performance Websites with Ease and Speed",
-		"main_button_text": "Download on github",
-		"secondary_button_text": "Go to animated version"
+		"main_button_text": "Yes, I'd like to",
+		"secondary_button_text": "Pitch your articles"
 	},
 	"hero_animated": {
 		"secondary_button_text": "Go to base version"

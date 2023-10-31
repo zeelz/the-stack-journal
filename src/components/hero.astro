@@ -5,11 +5,33 @@ import abstractDottedGlobeIllustration from "assets/abstract-dotted-globe-illust
 import { Image } from "astro:assets";
 import { t } from "i18next";
 
+import Video from "@assets/tsj-video.mp4";
+
 const { dynamic = false } = Astro.props;
 ---
 
-<div class="relative isolate pt-14 dark:bg-stone-950">
-	<div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
+<div class="relative isolate dark:bg-stone-950" style="background-color: black; height: calc(100vh)">
+	<video controls width="auto" style="height: 100%; margin: 0 auto">
+		<!-- <source src="/media/cc0-videos/flower.webm" type="video/webm" />
+	  
+		<source src="/media/cc0-videos/flower.mp4" type="video/mp4" /> -->
+
+		<source src={Video} type="video/mp4" />
+
+		 Download the
+		<a href="/media/cc0-videos/flower.webm">WEBM</a>
+		 or
+		<a href="/media/cc0-videos/flower.mp4">MP4</a>
+		 video.
+	</video>
+
+	<!-- <div class="w-[50px] h-[10px] bg-[red] fixed inset 0 auto">
+		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+			<path stroke-linecap="round" stroke-linejoin="round" d="M19.5 5.25l-7.5 7.5-7.5-7.5m15 6l-7.5 7.5-7.5-7.5"></path>
+		</svg>
+	</div> -->
+
+	<!-- <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
 		<svg
 			class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem] animate-slide"
 			viewBox="0 0 1155 678">
@@ -111,7 +133,7 @@ const { dynamic = false } = Astro.props;
 				</linearGradient>
 			</defs>
 		</svg>
-	</div>
+	</div> -->
 </div>
 
 <style>

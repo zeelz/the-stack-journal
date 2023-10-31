@@ -5,6 +5,7 @@ import { Icon } from "astro-icon";
 import { localizePath } from "astro-i18next";
 import { t } from "i18next";
 import logo from "@assets/tsj-logo.svg"
+import lettermark from "@assets/tsj-lettermark.png"
 import { Image } from "astro:assets";
 
 export const menuitems = []
@@ -32,16 +33,16 @@ export const menuitems = []
 ]; */
 ---
 
-<div
+<div style="position: fixed; inset: auto 0;"
 	x-data="{open: window.innerWidth < 768 ? false : true}"
 	class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 z-10 md:pt-2 relative">
-	<div class="p-4 flex flex-row items-center justify-between">
+	<div class="p-4 flex flex-row items-center justify-center w-full">
 		<a
 			href={localizePath("/")}
 			class="flex gap-3 items-center text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
 			<!-- <logo name="logo" width="30" class="dark:invert" alt="Logo"></logo> -->
 			<Image src={logo} alt="" width={40}/>
-			The Stack Journal
+			<Image src={lettermark} alt="" height={50}/>
 		</a>
 		<button class="md:hidden text-gray-500 w-10 h-10 relative focus:outline-none" @click="open = !open">
 			<span class="sr-only">Open main menu</span>
@@ -64,7 +65,7 @@ export const menuitems = []
 			</div>
 		</button>
 	</div>
-	<nav
+	<nav style="display: none;"
 		:class="{'flex': open, 'hidden': !open}"
 		x-show="open"
 		x-transition:enter="transition ease-out duration-200"

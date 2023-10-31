@@ -2,10 +2,9 @@
 import { changeLanguage } from "i18next";
 import Container from "@components/container.astro";
 import Features from "@components/features.astro";
-import Faq from "@components/faq.astro";
 import Hero from "@components/hero.astro";
-import Newsletter from "@components/newsletter.astro";
 import Layout from "@layouts/Layout.astro";
+import Footer from "@components/footer.astro";
 
 changeLanguage("en");
 ---
@@ -13,8 +12,7 @@ changeLanguage("en");
 <Layout>
 	<Container>
 		<Hero />
-		<Features />
-		<Faq />
-		<Newsletter />
+		<!-- <Features /> -->
+		<!-- <Footer /> -->
 	</Container>
 </Layout>

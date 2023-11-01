@@ -24,7 +24,7 @@ import Footer from "./footer.astro";
 				<p class="text-lg text-center md:pb-4">Be the first to know when we launch, post job offers, events, newsletters and more</p>
 			</div>
 
-			<div class="flex">
+			<div id="newsletter" class="flex">
 				<Newsletter />
 			</div>
 		</div>
@@ -79,7 +79,7 @@ window.addEventListener("scroll", function () {
 
 function checkElementInView() {
 	// viewport target
-	const element = document.getElementById("essayButtons");
+	const element = document.getElementById("newsletter");
 
 	if (element) {
 		const elementTop = element.getBoundingClientRect().top;

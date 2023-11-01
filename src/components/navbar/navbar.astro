@@ -64,17 +64,3 @@ import { Image } from "astro:assets";
 		</div> -->
 	</nav>
 </div>
-
-<script is:inline>
-const lettermarkLogo = document.querySelector("#lettermarkLogo");
-
-window.onscrollend = () => {
-	window.onscroll = () => {
-		if (window.scrollY >= 960) {
-			lettermarkLogo?.setAttribute("src", "logo.svg");
-		} else {
-			// console.log('back again')
-		}
-	};
-};
-</script>

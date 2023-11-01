@@ -8,6 +8,9 @@ module.exports = {
 				sans: ["Inter Variable", "Inter", ...defaultTheme.fontFamily.sans],
 			},
 		},
+		colors: {
+			'tsjgreen': '#a8e1b0',
+		},
 	},
 	plugins: [require("@tailwindcss/typography"), require.resolve("prettier-plugin-astro")],
 	darkMode: "class",

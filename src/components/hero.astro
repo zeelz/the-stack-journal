@@ -10,23 +10,25 @@ import Video from "@assets/tsj-video.mp4";
 const { dynamic = false } = Astro.props;
 ---
 
-<div class="relative isolate dark:bg-stone-950" style="background-color: black; height: calc(100vh)">
+<div class="relative isolate dark:bg-stone-950 md:h-screen bg-[#000]">
 	<!-- <video controls width="auto" style="height: 100%; margin: 0 auto">
 		<source src={Video} type="video/mp4" />
 		 Download the<a href="/media/cc0-videos/flower.webm">WEBM</a>or<a href="/media/cc0-videos/flower.mp4">MP4</a>
 		 video.
 	</video> -->
 
-	<section class="wrap">
+	<section class="wrap min-h-[400px] md:h-screen">
 		<div class="video-bg">
 			<!-- autoplay=0 -->
 			<iframe
 				src="https://www.youtube.com/embed/3wjlKBuOqUE?autoplay=1&mute=1&playsinline=1&loop=1&controls=0&disablekb=1&rel=0"
 				frameborder="0"
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-				allowfullscreen>
+				allowfullscreen
+				class="md:w-screen md:h-screen md:top-1/2 md:left-1/2 md:translate-x-1/2 md:translate-y-1/2">
 			</iframe>
 		</div>
+
 		<!-- <div class="content">
 			<div class="container bg-[red]">
 				<div class="w-[50px] h-[10px] bg-[red] fixed inset auto auto 0">
@@ -37,110 +39,6 @@ const { dynamic = false } = Astro.props;
 			</div>
 		</div> -->
 	</section>
-
-	<!-- <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
-		<svg
-			class="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem] animate-slide"
-			viewBox="0 0 1155 678">
-			<path
-				fill="url(#9b2541ea-d39d-499b-bd42-aeea3e93f5ff)"
-				fill-opacity=".3"
-				d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z">
-			</path>
-			<defs>
-				<linearGradient
-					id="9b2541ea-d39d-499b-bd42-aeea3e93f5ff"
-					x1="1155.49"
-					x2="-78.208"
-					y1=".177"
-					y2="474.645"
-					gradientUnits="userSpaceOnUse">
-					<stop stop-color="#9089FC"></stop>
-					<stop offset="1" stop-color="#FFD580"></stop>
-				</linearGradient>
-			</defs>
-		</svg>
-	</div>
-	<div class="sm:pt-10">
-		<div class="mx-auto max-w-7xl">
-			<div class="mx-auto max-w-2xl text-center">
-				<h1 class="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-6xl">{t("hero.title")}</h1>
-				<p class="mt-6 text-lg leading-8 text-gray-900 dark:text-gray-100">
-					{t("hero.subtitle")}
-				</p>
-				<div class="mt-10 flex items-center justify-center gap-x-2 md:gap-x-6">
-					<Link href="https://github.com/zankhq/astros">{t("hero.main_button_text")}</Link>
-					{
-						dynamic ? (
-							<Link href="/" style="muted">
-								{t("hero_animated.secondary_button_text")}
-								<span aria-hidden="true" class="pl-1 text-black dark:text-white">
-									→
-								</span>
-							</Link>
-						) : (
-							<Link href="/animated" style="muted">
-								{t("hero.secondary_button_text")}
-								<span aria-hidden="true" class="pl-1 text-black dark:text-white">
-									→
-								</span>
-							</Link>
-						)
-					}
-				</div>
-			</div>
-			<div class="flex justify-center items-center mt-4 md:mt-8">
-				{
-					dynamic ? (
-						<>
-							<h2
-								class="text-2xl md:text-4xl max-w-2xl text-center font-bold tracking-tight text-black dark:text-white absolute"
-								style="line-height: 1.5">
-								{t("hero.globe_title")}
-							</h2>
-							<Cobe />
-						</>
-					) : (
-						<Image
-							class="inline-block mt-12 md:mt-20"
-							src={abstractDottedGlobeIllustration}
-							alt="Astros"
-							width={600}
-							height={600}
-							loading="eager"
-						/>
-					)
-				}
-			</div>
-		</div>
-	</div>
-	<div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
-		<svg
-			class="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem] animate-slide"
-			viewBox="0 0 1155 678">
-			<path
-				fill="url(#b9e4a85f-ccd5-4151-8e84-ab55c66e5aa1)"
-				fill-opacity=".3"
-				d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z">
-			</path>
-			<defs>
-				<linearGradient
-					id="b9e4a85f-ccd5-4151-8e84-ab55c66e5aa1"
-					x1="1155.49"
-					x2="-78.208"
-					y1=".177"
-					y2="474.645"
-					gradientUnits="userSpaceOnUse">
-					<stop stop-color="#9089FC">
-						<animate attributeName="stop-color" values="#9089FC; #FF80B5; #9089FC" dur="5s" repeatCount="indefinite"></animate>
-					</stop>
-					<stop offset="1" stop-color="#ffb6c1">
-						<animate attributeName="stop-color" values="#ffb6c1; #9089FC; #ffb6c1" dur="5s" repeatCount="indefinite"></animate>
-					</stop>
-				</linearGradient>
-			</defs>
-		</svg>
-	</div> -->
 </div>
 
 <style>
@@ -173,7 +71,7 @@ const { dynamic = false } = Astro.props;
 
 	.wrap {
 		position: relative;
-		height: 100vh;
+		/* height: 100vh; */
 	}
 
 	.video-bg {
@@ -198,12 +96,25 @@ const { dynamic = false } = Astro.props;
 	.video-bg iframe {
 		display: block;
 		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		width: 100vw;
-		/* height: 60vw; */
-		height: 100vh;
+
+		top: 0;
+		/* left: 50%; */
+		/* transform: translate(-50%, -50%); */
+		/* finish this later */
+		/* ultimately mobile should have 500px for video page */
+		width: 100%;
+		height: 100%;
+		/* min-height: 200px; */
+	}
+
+	@media (min-width: 768px) {
+		.video-bg iframe {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100vw;
+			height: 100vh;
+		}
 	}
 
 	.content {
